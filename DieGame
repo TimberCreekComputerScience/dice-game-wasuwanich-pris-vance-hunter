@@ -1,0 +1,34 @@
+
+public class DieGame{
+	public static void main( String [] args) {
+		
+		int totalNumberOfTurns = 10;
+		int computerDie;
+		int userDie;
+		int computerScore = 0;
+		int userScore = 0;
+		
+		for( int turn = 1; turn <= totalNumberOfTurns; turn++ ) {
+			computerDie = (int)(Math.random() * 6) + 1;;
+			userDie = (int)(Math.random() * 6) + 1;;
+			
+			if( computerDie > userDie ) {
+				computerScore = computerScore + 1;
+				System.out.println( "Computer won turn " + turn + ":(");
+			} else if( userDie > computerDie ) {
+				System.out.println( "You won turn " + turn + "!!");
+				userScore = userScore + 1;
+			} else {
+				System.out.println( "Turn " + turn + " was a tie :/" );
+			}
+		}
+		
+		if(computerScore > userScore ) {
+			System.out.println( "Comeputer was the grand winner, winning " + computerScore + " out of " + totalNumberOfTurns + " turns :(. You can do better next time!" );
+		} else if(userScore > computerScore ) {
+			System.out.println( "You are the grand winner, winning " + userScore + " out of " + totalNumberOfTurns + " turns!! You're the BEST!" );
+		} else if(computerScore == userScore ) {
+			System.out.println("It was a tie :/. Next time lets try to beat computer.");
+		}
+		}
+		}
