@@ -7,7 +7,7 @@ public class DieGame{
 
 		System.out.println("How old are you?");
 		int number = Die.nextInt();
-		System.out.println("You are " + number);
+		System.out.println("You are " + number + " years old.");
 		
 		int totalNumberOfTurns = 10;
 		int computerDie;
