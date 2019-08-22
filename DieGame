@@ -1,6 +1,13 @@
+import java.util.Scanner;
 
 public class DieGame{
 	public static void main( String [] args) {
+		
+		Scanner Die = new Scanner (System.in);
+
+		System.out.println("How old are you?");
+		int number = Die.nextInt();
+		System.out.println("You are " + number);
 		
 		int totalNumberOfTurns = 10;
 		int computerDie;
